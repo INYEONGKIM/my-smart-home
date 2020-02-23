@@ -77,7 +77,7 @@ void loop() {
 
   }
 
-  delay(1000); // for test delay
+  delay(1000);
 }
 
 String makeNowTime2String() {
@@ -86,19 +86,13 @@ String makeNowTime2String() {
   int m = rtc.getMinutes();
   int s = rtc.getSeconds();
 
-  if (h < 10) {
-    res.concat("0");
-  }
+  if (h < 10) { res.concat("0"); }
   res.concat(String(h));
 
-  if (m < 10) {
-    res.concat("0");
-  }
+  if (m < 10) { res.concat("0"); }
   res.concat(String(m));
 
-  if (s < 10) {
-    res.concat("0");
-  }
+  if (s < 10) { res.concat("0"); }
   res.concat(String(s));
   return res;
 }
